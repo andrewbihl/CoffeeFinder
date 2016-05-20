@@ -13,6 +13,10 @@
 		2F15DB961CE27BF80002BE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F15DB941CE27BF80002BE3F /* Main.storyboard */; };
 		2F15DB981CE27BF80002BE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F15DB971CE27BF80002BE3F /* Assets.xcassets */; };
 		2F15DB9B1CE27BF80002BE3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F15DB991CE27BF80002BE3F /* LaunchScreen.storyboard */; };
+		2F15DBA31CE2805B0002BE3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F15DBA21CE2805B0002BE3F /* MapKit.framework */; };
+		2F15DBA51CE280620002BE3F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F15DBA41CE280620002BE3F /* CoreLocation.framework */; };
+		2F15DBA81CE399960002BE3F /* CoffeeShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F15DBA71CE399960002BE3F /* CoffeeShop.m */; };
+		2F15DBBD1CE3C9A00002BE3F /* WaynesboroLocationFile.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2F15DBBC1CE3C9A00002BE3F /* WaynesboroLocationFile.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		2F15DB971CE27BF80002BE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F15DB9A1CE27BF80002BE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F15DB9C1CE27BF80002BE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F15DBA21CE2805B0002BE3F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2F15DBA41CE280620002BE3F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2F15DBA61CE399960002BE3F /* CoffeeShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeShop.h; sourceTree = "<group>"; };
+		2F15DBA71CE399960002BE3F /* CoffeeShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeShop.m; sourceTree = "<group>"; };
+		2F15DBBC1CE3C9A00002BE3F /* WaynesboroLocationFile.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = WaynesboroLocationFile.gpx; path = ../../../Downloads/WaynesboroLocationFile.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F15DBA51CE280620002BE3F /* CoreLocation.framework in Frameworks */,
+				2F15DBA31CE2805B0002BE3F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,9 @@
 		2F15DB7F1CE27BF80002BE3F = {
 			isa = PBXGroup;
 			children = (
+				2F15DBBC1CE3C9A00002BE3F /* WaynesboroLocationFile.gpx */,
+				2F15DBA41CE280620002BE3F /* CoreLocation.framework */,
+				2F15DBA21CE2805B0002BE3F /* MapKit.framework */,
 				2F15DB8A1CE27BF80002BE3F /* CoffeeFinder */,
 				2F15DB891CE27BF80002BE3F /* Products */,
 			);
@@ -62,6 +76,8 @@
 				2F15DB8F1CE27BF80002BE3F /* AppDelegate.m */,
 				2F15DB911CE27BF80002BE3F /* ViewController.h */,
 				2F15DB921CE27BF80002BE3F /* ViewController.m */,
+				2F15DBA61CE399960002BE3F /* CoffeeShop.h */,
+				2F15DBA71CE399960002BE3F /* CoffeeShop.m */,
 				2F15DB941CE27BF80002BE3F /* Main.storyboard */,
 				2F15DB971CE27BF80002BE3F /* Assets.xcassets */,
 				2F15DB991CE27BF80002BE3F /* LaunchScreen.storyboard */,
@@ -137,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F15DB9B1CE27BF80002BE3F /* LaunchScreen.storyboard in Resources */,
+				2F15DBBD1CE3C9A00002BE3F /* WaynesboroLocationFile.gpx in Resources */,
 				2F15DB981CE27BF80002BE3F /* Assets.xcassets in Resources */,
 				2F15DB961CE27BF80002BE3F /* Main.storyboard in Resources */,
 			);
@@ -150,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F15DB931CE27BF80002BE3F /* ViewController.m in Sources */,
+				2F15DBA81CE399960002BE3F /* CoffeeShop.m in Sources */,
 				2F15DB901CE27BF80002BE3F /* AppDelegate.m in Sources */,
 				2F15DB8D1CE27BF80002BE3F /* main.m in Sources */,
 			);

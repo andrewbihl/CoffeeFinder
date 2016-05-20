@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kHc-8D-sZL">
+                                <rect key="frame" x="20" y="106" width="560" height="494"/>
+                                <color key="backgroundColor" red="0.92554378800000003" green="0.86101348779999998" blue="0.63492591190000003" alpha="0.82390624999999995" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.47574118589999997" green="0.3560611454" blue="0.25569377910000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoffeeFinder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYz-iw-wZn">
+                                <rect key="frame" x="164" y="20" width="273" height="57.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="48"/>
+                                <color key="textColor" red="0.92554378799392101" green="0.86101348784194531" blue="0.63492591185410219" alpha="0.82390624999999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47574118589743586" green="0.35606114540211242" blue="0.25569377905078827" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XYz-iw-wZn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7zF-RJ-g9B"/>
+                            <constraint firstItem="kHc-8D-sZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TjR-I2-bbO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kHc-8D-sZL" secondAttribute="bottom" id="c07-rc-bZb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kHc-8D-sZL" secondAttribute="trailing" id="jMB-E6-GtH"/>
+                            <constraint firstItem="XYz-iw-wZn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qco-0H-agS"/>
+                            <constraint firstItem="kHc-8D-sZL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="qkx-u1-Nz1"/>
+                            <constraint firstItem="kHc-8D-sZL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="yXk-vK-kNO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qkx-u1-Nz1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="listOfShops" destination="kHc-8D-sZL" id="Snr-Iw-mBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="233" y="97"/>
         </scene>
     </scenes>
 </document>
