@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 #import "CoffeeShop.h"
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface ViewController () <CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>;
 @property CLLocationManager* locationManager;
 @property CLLocation* userLocation;
 @property NSArray* coffeeShops;
@@ -28,7 +28,16 @@
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
 }
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+    CoffeeShop *current = [self.coffeeShops objectAtIndex:indexPath.row];
+    cell.textLabel.text = current.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%f miles away",current.distance];
+    return cell;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.coffeeShops.count;
+}
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     self.userLocation = locations.firstObject;
     [self.locationManager stopUpdatingLocation];
@@ -59,10 +68,12 @@
         NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:true];
         NSArray* sortedArray = [tempArray sortedArrayUsingDescriptors: [NSArray arrayWithObject:sortDescriptor]];
         self.coffeeShops = [NSArray arrayWithArray:sortedArray];
-        for (CoffeeShop* current in self.coffeeShops){
+        for (int i = 0; i <5; i++){
+            CoffeeShop *current = [self.coffeeShops objectAtIndex:i];
             NSLog(@"%@",current.name);
-            [UITableViewCell in
+            
         }
+        [self.listOfShops reloadData];
     }];
     
 }
