@@ -32,7 +32,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
     CoffeeShop *current = [self.coffeeShops objectAtIndex:indexPath.row];
     cell.textLabel.text = current.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%f miles away",current.distance];
+    
+    //Format distances to rounded values with two decimal points and leading zero displayed as needed.
+    NSNumberFormatter* distanceFormat = [NSNumberFormatter new];
+    [distanceFormat setMaximumFractionDigits:2];
+    [distanceFormat setRoundingMode:NSNumberFormatterRoundHalfUp];
+    NSString* distanceText = [distanceFormat stringFromNumber:[NSNumber numberWithFloat:current.distance]];
+    if ([distanceText characterAtIndex:0]=='.')
+        distanceText = [NSString stringWithFormat:@"0%@",distanceText];
+    
+    cell.detailTextLabel.text = distanceText;
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
